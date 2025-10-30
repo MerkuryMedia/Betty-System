@@ -1,0 +1,40 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Player Profile</title>
++    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
++    <link rel="stylesheet" href="./css/styles.css" />
++    <script src="./js/main.js" defer></script>
++</head>
++<body class="page profile-page" onload="subscribeToProfile()">
++    <main class="card profile-card" role="main">
++        <header>
++            <h1 class="profile-card__title">Player Profile</h1>
++            <p class="profile-card__username">Welcome back, <span id="current_username">Player</span></p>
++        </header>
++        <section class="scores-grid" aria-live="polite">
++            <article class="score-item">
++                <span class="score-item__label">Wallet Balance</span>
++                <span class="score-item__value" id="wallet_balance">1000.00</span>
++            </article>
++            <article class="score-item">
++                <span class="score-item__label">Risk Score</span>
++                <span class="score-item__value" id="risk_score">50.0</span>
++            </article>
++            <article class="score-item">
++                <span class="score-item__label">Pace Score</span>
++                <span class="score-item__value" id="pace_score">50.0</span>
++            </article>
++            <article class="score-item">
++                <span class="score-item__label">Volatility Score</span>
++                <span class="score-item__value" id="volatility_score">50.0</span>
++            </article>
++        </section>
++        <div class="profile-actions">
++            <a class="button button--primary" href="./menu.html">Play Games</a>
++        </div>
++    </main>
++</body>
++</html>
