@@ -1,0 +1,32 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Game Menu</title>
++    <link rel="stylesheet" href="css/styles.css">
++</head>
++<body>
++    <main class="menu-container">
++        <h1>Game Menu</h1>
++        <button id="open_slots_modal_button" class="primary-button" type="button">Play Slots</button>
++    </main>
++
++    <div id="slots_modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="slots_modal_title" aria-hidden="true">
++        <div class="modal-content" role="document">
++            <h2 id="slots_modal_title">Slots</h2>
++            <p class="modal-subtitle">Match the reels to win big!</p>
++            <div id="slots_reels_display" class="slots-reels" aria-live="polite">🍒 | 🍋 | ⭐</div>
++            <label for="slots_stake_input" class="input-label">Stake Amount</label>
++            <input type="number" id="slots_stake_input" class="stake-input" min="0" step="0.01" placeholder="Enter stake" inputmode="decimal">
++            <div class="modal-actions">
++                <button id="slots_wager_button" class="primary-button" type="button">Spin</button>
++                <button id="slots_close_button" class="secondary-button" type="button">Close</button>
++            </div>
++        </div>
++    </div>
++
++    <script src="js/main.js"></script>
++    <script src="js/slots.js"></script>
++</body>
++</html>
