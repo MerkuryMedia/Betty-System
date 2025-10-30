@@ -1,0 +1,21 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Casino Demo Login</title>
++    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
++    <link rel="stylesheet" href="./css/styles.css" />
++    <script src="./js/main.js" defer></script>
++</head>
++<body class="page page--centered">
++    <main class="card card--login" role="main">
++        <h1 class="card__title">Welcome to the Casino Demo</h1>
++        <p class="card__subtitle">Enter a username to start playing.</p>
++        <label class="form-label" for="username_input">Username</label>
++        <input id="username_input" class="form-input" type="text" name="username" placeholder="Your username" autocomplete="username" required />
++        <button class="button button--primary" type="button" onclick="handleLogin()">Log In</button>
++        <div id="login_status" class="status-text" role="status" aria-live="polite"></div>
++    </main>
++</body>
++</html>
