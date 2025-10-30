@@ -29,8 +29,8 @@
 +(function () {
 +    'use strict';
 +
-+    const SUPABASE_URL = 'https://YOUR_SUPABASE_PROJECT_URL.supabase.co';
-+    const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
++    const SUPABASE_URL = 'https://fvyqzjwbvnkdyclljzix.supabase.co';
++    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ2eXF6andidm5rZHljbGxqeml4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE4MjYzMDIsImV4cCI6MjA3NzQwMjMwMn0.Pvj0cQgQEiPA6IhnShN9oq4hB34Whag86UVfYIxOl0k';
 +
 +    const supabaseClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 +
@@ -137,10 +137,27 @@
 +                return;
 +            }
 +
-+            const userId = Array.isArray(data) ? data[0]?.user_id : data;
-+            if (!userId) {
-+                if (statusNode) {
-+                    statusNode.textContent = 'Login failed: invalid user data received.';
+          const userId = data; 
+            
+            if (!userId || isNaN(Number(userId))) {
+                if (statusNode) {
+                    statusNode.textContent = 'Login failed: Invalid user ID received.';
+                }
+                alert('Login failed: Invalid user ID received.');
+                return;
+            }
+            // --- MODIFIED CODE END ---
+
+            const sessionId = generateUUID();
+            // Note: We use String(userId) because localStorage only stores strings
+            persistSession(String(userId), sessionId); 
+
+            if (statusNode) {
+                statusNode.textContent = 'Login successful! Redirecting...';
+            }
+
+            window.location.href = 'profile.html';
+        } catch (error)
 +                }
 +                alert('Login failed: invalid user data received.');
 +                return;
