@@ -6,8 +6,8 @@
 -}
 -
 -// 1. Initialize Supabase
--const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL'; // <-- REPLACE THIS
--const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY'; // <-- REPLACE THIS
+-const SUPABASE_URL = 'https://fvyqzjwbvnkdyclljzix.supabase.co'; // <-- REPLACE THIS
+-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ2eXF6andidm5rZHljbGxqeml4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE4MjYzMDIsImV4cCI6MjA3NzQwMjMwMn0.Pvj0cQgQEiPA6IhnShN9oq4hB34Whag86UVfYIxOl0k'; // <-- REPLACE THIS
 -const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 -
 -// Global state variables (temporary in memory)
