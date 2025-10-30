@@ -1,8 +1,3 @@
-diff --git a/js/main.js b/js/main.js
-index 4b585b61ad354cecccce08e460126acff8659696..faf3d3d3ce482d22d4d81fe6fbb4f50ce5ec6728 100644
---- a/js/main.js
-+++ b/js/main.js
-@@ -1,81 +1,98 @@
  function generateUUID() {
      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
          var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
